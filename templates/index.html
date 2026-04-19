@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card center">
+            <h1>Student Manager Web App</h1>
+            <p>Welcome to the Student Manager project built with Flask and MySQL.</p>
+
+            <div class="button-group">
+                <a class="btn" href="{{ url_for('show_students') }}">View Students</a>
+                <a class="btn btn-secondary" href="{{ url_for('add_student') }}">Add Student</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

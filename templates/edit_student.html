@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card form-card">
+            <h1>Edit Student</h1>
+            <p class="subtitle">Update the student information below.</p>
+
+            <form method="POST">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" value="{{ student[1] }}" required>
+
+                <label for="age">Age</label>
+                <input id="age" type="number" name="age" value="{{ student[2] }}" required>
+
+                <label for="major">Major</label>
+                <input id="major" type="text" name="major" value="{{ student[3] }}" required>
+
+                <div class="button-group">
+                    <button class="btn" type="submit">Update Student</button>
+                    <a class="btn btn-secondary" href="{{ url_for('show_students') }}">Back to Students</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
